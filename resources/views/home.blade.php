@@ -21,7 +21,11 @@
 
                     <input id="wonde-id" type="text" class="form-control" placeholder="Wonde ID" value="{{ $wonde_user_id }}">
                     <br>
-                    <button class="btn btn-success save-wonde-id" type="button">Save</button>
+                    <button class="btn btn-success save-wonde-id" type="button">{{ __('Save') }}</button>
+                    @if ($wonde_user_id)
+                        <hr>
+                        <a href="{{ url('/classes') }}" class="btn btn-info text-white">{{ __('My Classes') }}</a>
+                    @endif
                 </div>
             </div>
         </div>

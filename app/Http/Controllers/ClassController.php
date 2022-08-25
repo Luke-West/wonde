@@ -9,10 +9,8 @@ class ClassController extends Controller
 {
     public function list()
     {
-        $service = new WondeApiClient(env('SCHOOL_ID'));
+        $service = new WondeApiClient(env('SCHOOL_ID')); 
         $classesAndStudents = [];
-
-        //A1851920782
 
         if ($employee = $service->getEmployee(Auth::user()->wonde_user_id)) {
             foreach ($employee->data->classes->data as $class) {
@@ -21,6 +19,8 @@ class ClassController extends Controller
             }
         }
 
-        dd($classesAndStudents);
+        return view('classes', [
+            'classesAndStudents' => $classesAndStudents,
+        ]);
     }
 }
