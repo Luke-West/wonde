@@ -23,3 +23,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/classes', [App\Http\Controllers\ClassController::class, 'list'])->name('classes');
+Route::get('/employees/{userId}/update-wonde-id/{wondeId}', [App\Http\Controllers\EmployeeController::class, 'list'])->name('classes');

@@ -14,7 +14,14 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    @if ($wonde_user_id === null)
+                        <p>{{ __("You first need to authenticate with Wonde. Please enter your passcode here") }}<br>
+                        <small>({{ __("The employee's ID") }})</small></p>
+                    @endif
+
+                    <input id="wonde-id" type="text" class="form-control" placeholder="Wonde ID" value="{{ $wonde_user_id }}">
+                    <br>
+                    <button class="btn btn-success save-wonde-id" type="button">Save</button>
                 </div>
             </div>
         </div>
