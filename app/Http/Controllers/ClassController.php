@@ -9,7 +9,7 @@ class ClassController extends Controller
 {
     public function list()
     {
-        $service = new WondeApiClient(env('SCHOOL_ID')); 
+        $service = new WondeApiClient(env('SCHOOL_ID'));
         $classesAndStudents = [];
 
         if ($employee = $service->getEmployee(Auth::user()->wonde_user_id)) {
