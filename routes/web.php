@@ -21,7 +21,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/classes', [App\Http\Controllers\ClassController::class, 'list'])->name('classes');
-
 Route::post('/employees/{user}/update-wonde-id', [App\Http\Controllers\EmployeeController::class, 'updateWondeId'])->name('update-wonde-id');
