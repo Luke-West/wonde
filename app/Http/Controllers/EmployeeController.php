@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateWondeIdRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
 
 class EmployeeController extends Controller
 {
@@ -12,6 +13,8 @@ class EmployeeController extends Controller
         $user->wonde_user_id = $request->wondeId;
         $user->save();
 
-        return;
+        Session::flash('status', 'Successfully set your Wonde ID');
+
+        return $user;
     }
 }

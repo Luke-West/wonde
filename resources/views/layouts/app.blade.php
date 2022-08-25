@@ -6,8 +6,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <input type="hidden" id="user-id" value="{{ Auth::user()->id }}">
-
+    @if(Auth::user())
+        <input type="hidden" id="user-id" value="{{ Auth::user()->id }}">
+    @endif
     <title>Wonde</title>
     <span>
 
