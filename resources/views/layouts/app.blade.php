@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <span id="user-id" value="{{ Auth::user()->id }}">
+    <input type="hidden" id="user-id" value="{{ Auth::user()->id }}">
 
     <title>Wonde</title>
     <span>
