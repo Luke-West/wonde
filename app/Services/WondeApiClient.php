@@ -17,22 +17,27 @@ class WondeApiClient
     }
 
 
-    protected function doRequest(string $method, string $endpoint, array $json = [], $debug=false)
+    protected function doRequest(string $method, string $endpoint, array $json = [])
     {
         $token = env('BEARER_TOKEN');
         $wondeApiUrl = env('WONDE_API_URL');
         $client = new Client();
 
-        $response = $client->request(
-            $method,
-            "{$wondeApiUrl}/schools/{$this->schoolId}/{$endpoint}",
-            [
-                'headers' => [
-                    'Authorization' => "Bearer {$token}",
-                ],
-                'json' => $json,
-            ]
-        );
+        try {
+            $response = $client->request(
+                $method,
+                "{$wondeApiUrl}/schools/{$this->schoolId}/{$endpoint}",
+                [
+                    'headers' => [
+                        'Authorization' => "Bearer {$token}",
+                    ],
+                    'json' => $json,
+                ]
+            );
+        } catch (\Exception $e) {
+            echo 'Did you add a valid Employee ID to your user? Caught exception: ',  $e->getMessage(), ".\n\n";
+            die();
+        }
 
         return \GuzzleHttp\json_decode($response->getBody()->getContents());
     }
