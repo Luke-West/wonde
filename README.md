@@ -19,7 +19,7 @@ instructions to run the project using `artisan serve`
 10. `yarn run dev`
 11. `php artisan serve`
 
-* Your WONDE_API_URL is `https://api.wonde.com/v1.0`. Naturally, this would normally be secret (even though it's public knowledge anyway via the api docs). But I'm giving the info away here
+*Your WONDE_API_URL is `https://api.wonde.com/v1.0`. Naturally, this would normally be secret (even though it's public knowledge anyway via the api docs). But I'm giving the info away here
 for demonstration purposes.
 
 At this point you need to register an account. You can use any email and name that you like, we will connect with our Wonde account afterwards.
