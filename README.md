@@ -26,16 +26,18 @@ At this point you need to register an account. You can use any email and name th
 
 Once you log in, you will be met with this homepage:
 
-// home page picture
+[Screenshot 2022-08-26 at 08 38 10](https://user-images.githubusercontent.com/10943310/186849083-e3dc23c9-f152-4600-94dc-66295d73ac45.png)
 
 You will need to grab the ID on an employee via the Wonde API. This would preferrably be an employee that has classes.
 
 In a real life project I would probably have a seperate column handle this link, for example a secure_key column. But for the sake of this project, this is what I went with.
 
-// 
+![Screenshot 2022-08-26 at 08 30 02](https://user-images.githubusercontent.com/10943310/186849138-b70c43b1-a279-42b1-92ee-8041866bf0be.png)
 
 The key you want is the ID in the picture above.
 
 Copy and Paste that into the input field and click save.
 
 Go to your classes.
+
+If you have any questions about any of this at all, please feel free to shoot me an email or give me a call.
