@@ -26,7 +26,7 @@ At this point you need to register an account. You can use any email and name th
 
 Once you log in, you will be met with this homepage:
 
-[Screenshot 2022-08-26 at 08 38 10](https://user-images.githubusercontent.com/10943310/186849083-e3dc23c9-f152-4600-94dc-66295d73ac45.png)
+![Screenshot 2022-08-26 at 08 38 10](https://user-images.githubusercontent.com/10943310/186849083-e3dc23c9-f152-4600-94dc-66295d73ac45.png)
 
 You will need to grab the ID on an employee via the Wonde API. This would preferrably be an employee that has classes.
 
