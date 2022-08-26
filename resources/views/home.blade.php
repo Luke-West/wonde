@@ -14,6 +14,10 @@
                         </div>
                     @endif
 
+                    <div class="alert alert-warning valid-id-error" role="alert">
+                        {{ __("Please enter a valid ID") }}
+                    </div>
+
                     @if ($wonde_user_id === null)
                         <p>{{ __("You first need to authenticate with Wonde. Please enter your passcode here") }}<br>
                         <small>({{ __("The employee's ID") }})</small></p>
